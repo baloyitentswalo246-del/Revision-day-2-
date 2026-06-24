@@ -345,6 +345,24 @@ Copy and save this as `calculator.html`:
     function updateResults() {
       // YOUR CODE HERE
     }
+     //calculate the average
+
+    socres.reduce(function(score, sum){
+    return sum+=score
+    })/score.length
+
+//get the best score
+
+let sortedDescending = score.sort(function(a, b){
+  return b-a
+})
+
+//highest score
+
+bestScore.innerHTML =
+
+
+
 
     // Add event listeners
     addBtn.addEventListener("click", addScore);

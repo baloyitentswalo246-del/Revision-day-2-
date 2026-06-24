@@ -14,8 +14,9 @@ const scoreDisplay = document.getElementById("score")
 
 function addScore(){
     let scores = Number(scoreInput.value);
-
-    if (scores < 0 || scores > 100){
+     if (scores === "") {
+        alert("Please enter a score")
+    } else if (scores < 0 || scores > 100){
         alert("Score must be between 0-100")
     }else{
         scores.push(parseInt(scoreInput.value));
@@ -40,6 +41,7 @@ function updateResults(){
         
 function clearrAllScore(){
     scores =[];
+    scoreInput.value = "";
     updateScoreList();
 
     
@@ -49,7 +51,7 @@ function clearrAllScore(){
 
 
 addBtn.addEventListener("click", addScore);
-    clearBtn.addEventListener("click", clearAllScores);
+    clearBtn.addEventListener("click", );
 
 
 
